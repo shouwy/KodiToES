@@ -1,0 +1,10 @@
+addons:
+  sonarcloud:
+    organization: "shouwy-github" # the key of the org you chose at step #3
+    token:
+      secure: fe80de2ae2faf869e368086d1dcb9d946a76ddac # encrypted value of your token
+script:
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - mvn sonar:sonar -Dsonar.projectKey=shouwy_KodiToES -Dsonar.organization=shouwy-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=fe80de2ae2faf869e368086d1dcb9d946a76ddac
+
+
